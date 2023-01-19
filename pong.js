@@ -49,8 +49,8 @@ function draw() {
   colisaoBolinha(); //Verifica se a bolinha colidiu com a borda
   desenhaRaquete(xRaquete, yRaquete);
   desenhaRaquete(xRaquete2, yRaquete2);
-  movimentoRaquete();
-  movimentoRaquete2();
+  movimentoRaquete(); //movimenta a raquete
+  movimentoRaquete2(); //movimenta a raquete do adversário
   //colisaoRaquete();
   colisaoBiblioteca(xRaquete, yRaquete);
   colisaoBiblioteca(xRaquete2, yRaquete2);
