@@ -1,4 +1,4 @@
-/# Projeto: From zero to dev
+# Projeto: From zero to dev
 
 > Status do projeto: em desenvolvimento
 
