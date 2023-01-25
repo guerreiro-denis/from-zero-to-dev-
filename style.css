@@ -1,285 +1,233 @@
+:root {
+    --main-cinza: #CCCCCC;
+    --main-branco: #FFFFFF;
+    --main-preto: #000000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-	font-family: 'Montserrat', sans-serif;
+    background: url(../img/fundo.jpg);
+    background-position: center center;
+    background-size: cover cover;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
 }
 
-header {
-	background: #BBBBBB;
-	padding: 20px 0;
-
-}
-
-.caixa{
-	position: relative;
-	width: 940px;
-	margin: 0 auto;
-}
-
-nav li {
-	display: inline;
-	margin: 0 0 0 15px;
-}
-
-nav a {
-	text-transform: uppercase;
-	font-size: 22px;
-	text-decoration: none;
-	color: #000000;
-	font-weight: bold;
-}
-
-
-nav a:hover {
-	color: #C78C19;
-	text-decoration: underline;
-}
-
-nav {
-	position: absolute;
-    top: 110px;
-    right: 0;
-}
-
-.produtos{
-	width: 940px;
-	margin: 0 auto;
-	padding: 50px 0;
-}
-
-.produtos li {
-	display: inline-block;
-	text-align: center;
-	width: 30%;
-	vertical-align: top;
-	margin: 0 1.5%;
-	padding: 30px 20px;
-	box-sizing: border-box;
-	border: 2px solid #000000;
-	border-radius: 10px;
-}
-
-.produtos li:hover {
-	border-color:#C78C19;
-}
-
-.produtos li:active {
-	border-color: #088C19;
-}
-
-.produtos li:hover h2 {
-	font-size: 34px;
-}
-
-.produtos h2 {
-	font-weight: bold;
-	font-size: 30px;
-}
-
-.produtos-descriçao {
-	font-size: 18px;
-}
-
-.produtos-preço {
-	font-weight: bold;
-	font-size: 22px;
-	margin-top: 10px;
-}
-
-footer {
-	text-align: center;
-	background: url("bg.jpg");
-	padding: 40px 0;
-}
-
-.copyright {
-	font-size: 13px;
-	color: #FFFFFF;
-	margin-top: 20px;
+body, input {
+    font-family: 'Teko', sans-serif;
 }
 
 main {
-	
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh 8vw 10vh 12vw;
+    display: flex;
+    gap: 1vw;
 }
 
-.main {
-	width: 940px;
-	margin: 0 auto;
+.robotron {
+    background: url(../img/estrutura.png) no-repeat;
+    background-position: center center;
+    margin: 0;
+    flex-basis: 40%;
+    position: relative;
 }
 
-form {
-	margin: 40px 0;
+.robo {
+    height: 110%;
+    z-index: 1;
+    position: absolute;
+    left: -20%;
+    top: -5%;
 }
 
-form label, form legend {
-	display: block;
-	font-size: 20px;
-	margin: 0 0 10px;
+.titulo {
+    transform: rotate(180deg);
+    font-weight: 500;
+    font-size: 130px;
+    position: absolute;
+    bottom: 7rem;
+    left: -3rem;
+    line-height: 0.8;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: rgba(255,255,255,0.8)
 }
 
-.input-padrao {
-	display: block;
-	margin: 0 0 20px;
-	padding: 10px 25px;
-	width: 50%;
+.box {
+    background: rgba(0,0,0,0.6);
+    clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
+    border-left: 5px solid var(--main-cinza);
+    height: 80%;
 }
 
-.checkbox {
-	margin: 20px 0;
+/****************************** Equipamentos *****/
+
+.equipamentos {
+    flex-basis: 32%;
 }
 
-.enviar {
-	width: 40%;
-	padding: 15px 0;
-	background: orange;
-	font-size: 18px;
-	font-weight: bold;
-	color: white;
-	border: none;
-	border-radius: 5px;
-	transition: 1s all;
-	cursor: pointer;
+.montador {
+    height: 100%;;
 }
 
-.enviar:hover {
-	background: darkorange;
-	transform: scale(1.2);
+.montador-conteudo {
+    padding: 2em 10%;
 }
 
-table {
-	margin: 20px 0 40px;
+.peca {
+    padding: 1em 0;
 }
 
-thead {
-	background: #555555;
-	color: white;
-	font-weight: bold;
-}
-td, th {
-	border: 1px solid #000000;
-	padding: 8px 15px;
+.peca-titulo {
+    color: var(--main-branco);
+    text-transform: uppercase;
+    font-size: 2.5em;
 }
 
-/* css da página inicial */
-
-.banner {
-	width: 100%;
+.controle {
+    background: var(--main-preto);
+    border-radius: 25px;
+    float: right;
+    display: inline-flex;
+    padding: 5px;
+    align-items: center;
+    align-self: flex-end;
 }
 
-.titulo-principal {
-	text-align: center;
-	font-size: 2em;
-	margin: 0 0 1em;
-	clear: left;
+.controle-contador {
+    width: 40px;
+    height: 35px;
+    background: none;
+    border: 0;
+    margin: 0 1rem;
+    color: var(--main-branco);
+    text-align: center;
+    font-size: 2.5em;
+    display: inline-flex;
+    align-items: center;
+    padding-top: 8px;
 }
 
-.titulo-principal:first-letter {
-	font-weight: bold;
+.controle-ajuste {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 44px;
+    border-radius: 50%;
+    color: var(--main-cinza);
+    font-size: 4em;
+    background: var(--main-preto);
+    text-align: center;
+    border: 3px solid var(--main-cinza);
+    cursor: pointer;
 }
 
-.principal {
-	padding: 3em 0;
-	background: #FEFEFE;
-	width: 940px;
-	margin: 0 auto;
+.linha {
+    border-color: var(--main-cinza);
 }
 
-.principal p {
-	margin: 0 0 1em;
+.producao {
+    margin-top: 1em;
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: 0.2em 1em;
+    float: right;
+    border: 3px solid var(--main-branco);
+    background: var(--main-branco);
+    clip-path: polygon(100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 0);
+    cursor: pointer;
 }
 
-.principal strong {
-	font-weight: bold;
-}
-
-.principal em {
-	font-style: italic;
-}
-
-.mapa {
-	padding: 3em 0;
-	background: linear-gradient(#FEFEFE, #888888);
-}
-
-.mapa-conteudo {
-	width: 940px;
-	margin: 0 auto;
-}
-
-.mapa p {
-	margin: 0 0 2em;
-	text-align: center;
-}
-
-.beneficios {
-	padding: 3em 0;
-	background: #888888;
-}
-
-.conteudo-beneficio {
-	width: 640px;
-	margin: 0 auto;
-
-}
-
-.lista-beneficio {
-	width: 40%;
-	display: inline-block;
-	vertical-align: top;
-}
-
-.itens {
-	line-height: 1.5em;
-}
-
-.itens:first-child {
-	font-weight: bold;
-}
-
-.itens:before {
-	content: "★";
-}
-
-.imagem-beneficios {
-	width: 60%;
-	opacity: 1;
-	transition: 400ms;
-	box-shadow: 10px 10px 10px #000000;
-}
-
-.imagem-beneficios:hover {
-	opacity: 0.3;
-
-}
-
-.utensilios {
-	width: 120px;
-	float: left;
-	margin: 0 20px 20px 0
+.producao:hover {
+    background: var(--main-preto);
+    color: var(--main-branco)
 }
 
 
-.video {
-	width: 560px;
-	margin: 2em auto;
+
+/****************************** Estatísticas *****/
+.estatisticas {
+    flex-basis: 23%;
+    padding: 2em 2em 0;
 }
 
-@media screen and (max-width: 480px) {
-    .caixa, .principal, .mapa-conteudo, .video {
-        width: auto;
+.estatistica {
+    color: var(--main-branco);
+    display: flex;
+    align-items: flex-start;
+    height: 25%;
+}
+
+.estatistica-titulo {
+    font-size: 1.5em;
+    border-bottom: 1px solid var(--main-cinza);
+    flex-basis: 40%;
+    text-transform: uppercase;
+    order: 1
+}
+
+.estatistica-valor {
+    flex-basis: 60%;
+    position: relative;
+    margin: 10px 0 0;
+    order: 2;
+    margin: -10px 0 0;
+}
+
+.estatistica-valor::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    border: 1px solid var(--main-cinza);
+    border-radius: 50%;
+}
+
+.estatistica-numero {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-46%);
+    width: 100%;
+    line-height: 100%;
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+}
+
+.estatistica:nth-child(2n) .estatistica-titulo {
+    order: 2;
+    text-align: right;
+}
+
+.estatistica:nth-child(2n) .estatistica-valor {
+    order: 1;
+    flex-basis: 35%;
+    margin: 10px 0 0;
+}
+
+@media screen and (max-width: 1600px) {
+    body { 
+        font-size: 14px;
+    }
+    main {
+        width: 90vw;
+        height: 80vh;
+        margin: 5vh auto;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body { 
+        font-size: 13px;
     }
 
-    .conteudo-beneficio {
-    	width: auto;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    nav {
-        position: static;
-    }
-
-    .lista-beneficios, .imagem-beneficios {
-        width: 100%;
+    main {
+        width: 96vw;
+        height: 80vh;
+        margin: 10vh auto;
     }
 }
